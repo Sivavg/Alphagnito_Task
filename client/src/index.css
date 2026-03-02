@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-light: #e9ecf3;
+  --primary-1: #dde2ed;
+  --primary-2: #bac3da;
+  --primary-3: #1f3d88;
+  --primary-4: #1c367a;
+  --primary-5: #19306d;
+  --primary-6: #172d66;
+  --primary-7: #132452;
+  --primary-8: #0e1b3d;
+  --primary-dark: #0b1530;
+
+  --accent-success: #2ecc71;
+  --accent-success-light: #e8f8ee;
+  --accent-warning: #f4b400;
+  --accent-warning-light: #fdf5e6;
+  --accent-danger: #e74c3c;
+  --accent-danger-light: #fceceb;
+  --accent-info: #4277ff;
+
+  --neutral-1: #fdfdfe;
+  --neutral-2: #fafafa;
+  --neutral-3: #f5f5f5;
+  --neutral-4: #ececec;
+  --neutral-5: #e0e0e0;
+  --neutral-6: #c3c3c3;
+  --neutral-7: #b5b5b5;
+  --neutral-8: #555555;
+  --neutral-9: #474646;
+  --neutral-10: #3b3a3a;
+  --neutral-11: #2a2929;
+  --neutral-12: #1c1b1b;
+  --neutral-dark: #100f0f;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--neutral-3);
+  color: var(--neutral-12);
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--neutral-1);
+}
+
+.auth-right {
+  flex: 1;
+  background-color: #0b1121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-right-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-logo-img {
+  width: 550px;
+  height: 550px;
+  object-fit: contain;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.auth-box-subtitle {
+  text-align: center;
+  color: var(--neutral-8);
+  margin-bottom: 30px;
+}
+
+.form-control-custom {
+  border-radius: 8px;
+  padding: 12px 15px;
+  border: 1px solid var(--neutral-5);
+}
+
+.form-control-custom:focus {
+  border-color: var(--primary-3);
+  box-shadow: 0 0 0 0.2rem rgba(31, 61, 136, 0.25);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-3);
+  border-color: var(--primary-3);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-3);
+  border-color: var(--primary-3);
+  color: white;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--primary-dark);
+  color: var(--neutral-1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 25px 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.sidebar-menu-item {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--neutral-6);
+  cursor: pointer;
+  margin: 5px 15px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar-menu-item:hover {
+  color: var(--neutral-1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu-item.active {
+  background: linear-gradient(90deg, #ffffff 0%, #e9ecf3 100%);
+  color: var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu-item svg {
+  font-size: 1.1rem;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-2);
+  overflow-y: auto;
+}
+
+.topbar {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #eef0f5;
+  border: 1px solid #dde1e8;
+  border-radius: 12px;
+  margin: 18px 22px 0 22px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.page-content {
+  padding: 35px 30px;
+}
+
+.table-custom-wrapper {
+  background-color: var(--neutral-1);
+  border-radius: 12px;
+  border: 1px solid var(--neutral-4);
+  overflow: hidden;
+}
+
+.table-custom {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table-custom th {
+  background-color: var(--primary-1);
+  color: var(--neutral-10);
+  font-weight: 600;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--neutral-4);
+  font-size: 0.9rem;
+}
+
+.table-custom td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--neutral-4);
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: var(--neutral-9);
+}
+
+/* Badges based on design */
+.badge-active {
+  background-color: var(--accent-success-light);
+  color: var(--accent-success);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.badge-inactive {
+  background-color: var(--accent-warning-light);
+  color: var(--accent-warning);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(244, 180, 0, 0.2);
+}
+
+.badge-suspended {
+  background-color: var(--accent-danger-light);
+  color: var(--accent-danger);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.action-btn {
+  background: none;
+  border: 1px solid var(--neutral-4);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--neutral-8);
+  margin-right: 5px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--neutral-3);
+  border-color: var(--neutral-5);
+}
+
+.action-btn.view {
+  color: var(--neutral-8);
+}
+
+.action-btn.edit {
+  color: var(--accent-warning);
+}
+
+.action-btn.delete {
+  color: var(--accent-danger);
+  margin-right: 0;
+}
+
+.search-input {
+  padding-left: 35px;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-4);
+  background-color: var(--neutral-1);
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
